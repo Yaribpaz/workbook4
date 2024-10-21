@@ -7,7 +7,10 @@ let myInfo = {
     zip: 76126
 };
 function printContract(myInfo) {
-    console.log(myInfo);
+    console.log(myInfo.name);
+    console.log(myInfo.address);
+    console.log(myInfo.city + "," + myInfo.state + " " + myInfo.zip)
+    
   }
   
   printContract(myInfo)
