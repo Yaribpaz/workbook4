@@ -9,7 +9,7 @@ let myInfo = {
 function printContract(myInfo) {
     console.log(myInfo.name);
     console.log(myInfo.address);
-    console.log(myInfo.city + "," + myInfo.state + " " + myInfo.zip)
+    console.log(myInfo.city + "," + " " + myInfo.state + " " + myInfo.zip)
     
   }
   
