@@ -2,6 +2,6 @@
 
 let familyNames = ["Victor","Maritza","Anthony","Alex"];
 
-for (let i = 0; 1 < familyNames.length; i++) {
+for (let i = 0;i < familyNames.length; i++) {
     console.log(familyNames[i]);
 }
