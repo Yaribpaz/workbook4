@@ -15,8 +15,8 @@ for (let i = 0; i < students.length; i++) {
   let totalScores = 0;
 
   //inner loop to calculate total of the scores
-  for (let s = 0; s < scores.length; s++) {
-    totalScores += scores[s];
+  for (let x = 0; x < scores.length; x++) {
+    totalScores += scores[x];
   }
 
   let averageScore = totalScores / scores.length;
