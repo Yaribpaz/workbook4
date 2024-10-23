@@ -14,7 +14,7 @@ function calculateSubtotal(foods) {
     return subtotal;
 }
 
-function calculateTotal(subtotal) {
+function calculateTotals(subtotal) {
     let tax = subtotal * 0.08;
     let tip = subtotal * 0.18;
     let total = subtotal + tax + tip; 
@@ -23,7 +23,7 @@ function calculateTotal(subtotal) {
 }
 
 let subtotal = calculateSubtotal(lunch);
-let totals = calculateTotal(subtotal);
+let totals = calculateTotals(subtotal);
 
 console.log("Subtotal: $" + subtotal);
 console.log("Tax (8%): $" + totals.tax.toFixed(2));
