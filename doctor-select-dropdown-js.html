@@ -168,10 +168,10 @@
       let nintendoSelect = document.getElementById("nintendoSelect");
 
       for (const game of nintendoGames) {
-        let option1 = document.createElement("option");
-        option1.value = game.id;
-        option1.innerText = game.title;
-        nintendoSelect.appendChild(option1);
+        let option = document.createElement("option");
+        option.value = game.id;
+        option.innerText = game.title;
+        nintendoSelect.appendChild(option);
       }
     </script>
   </body>
