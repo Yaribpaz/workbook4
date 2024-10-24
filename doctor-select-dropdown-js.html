@@ -3,40 +3,176 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking an Appointment</title>
+    <title>Nintendo Games</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
   </head>
   <body>
     <main>
       <form>
-        <label for="doctorSelect" class="form-label">Doctors</label>
-        <select class="form-select" id="doctorSelect">
+        <label for="nintendoSelect" class="form-label">Nintendo Games</label>
+        <select class="form-select" id="nintendoSelect">
           <option value="">Select...</option>
-          <option value="1">Dr.Samwise-Cannoli</option>
-          <option value="2">Dr.Yoshi</option>
-          <option value="3">Dr.Salchi-Papa</option>
+          <!-- <option value="1">Paper Mario: The Thousand-Year Door</option>
+          <option value="2">The Legend of Zelda: Echoes of Wisdom</option>
+          <option value="3">Mario Party Superstars</option> -->
         </select>
       </form>
     </main>
+
     <script>
-        "use strict";
-        
-        let doctorSelect = document.getElementById("doctorSelect");
+      "use strict";
 
-        let option = document.createElement("option");
-        option1.value = "1";
-        option1.innerText = "Dr.Samwise-Cannoli";
-        doctorSelect.appendChild(option1);
+      const nintendoGames = [
+        {
+          id: 1,
+          title: "The Legend of Zelda: Breath of the Wild",
+          releaseYear: 2017,
+          platform: "Nintendo Switch",
+          genre: "Action-adventure",
+        },
+        {
+          id: 2,
+          title: "Super Mario Odyssey",
+          releaseYear: 2017,
+          platform: "Nintendo Switch",
+          genre: "Platformer",
+        },
+        {
+          id: 3,
+          title: "Mario Kart 8 Deluxe",
+          releaseYear: 2017,
+          platform: "Nintendo Switch",
+          genre: "Racing",
+        },
+        {
+          id: 4,
+          title: "Animal Crossing: New Horizons",
+          releaseYear: 2020,
+          platform: "Nintendo Switch",
+          genre: "Life simulation",
+        },
+        {
+          id: 5,
+          title: "Splatoon 2",
+          releaseYear: 2017,
+          platform: "Nintendo Switch",
+          genre: "Shooter",
+        },
+        {
+          id: 6,
+          title: "Super Smash Bros. Ultimate",
+          releaseYear: 2018,
+          platform: "Nintendo Switch",
+          genre: "Fighting",
+        },
+        {
+          id: 7,
+          title: "Pokémon Sword",
+          releaseYear: 2019,
+          platform: "Nintendo Switch",
+          genre: "Role-playing",
+        },
+        {
+          id: 8,
+          title: "Fire Emblem: Three Houses",
+          releaseYear: 2019,
+          platform: "Nintendo Switch",
+          genre: "Tactical role-playing",
+        },
+        {
+          id: 9,
+          title: "Luigi's Mansion 3",
+          releaseYear: 2019,
+          platform: "Nintendo Switch",
+          genre: "Action-adventure",
+        },
+        {
+          id: 10,
+          title: "Xenoblade Chronicles 2",
+          releaseYear: 2017,
+          platform: "Nintendo Switch",
+          genre: "Action role-playing",
+        },
+        {
+          id: 11,
+          title: "The Legend of Zelda: Tears of the Kingdom",
+          releaseYear: 2023,
+          platform: "Nintendo Switch",
+          genre: "Action-adventure",
+        },
+        {
+          id: 12,
+          title: "Super Mario Party",
+          releaseYear: 2018,
+          platform: "Nintendo Switch",
+          genre: "Party",
+        },
+        {
+          id: 13,
+          title: "Donkey Kong Country: Tropical Freeze",
+          releaseYear: 2018,
+          platform: "Nintendo Switch",
+          genre: "Platformer",
+        },
+        {
+          id: 14,
+          title: "Kirby Star Allies",
+          releaseYear: 2018,
+          platform: "Nintendo Switch",
+          genre: "Platformer",
+        },
+        {
+          id: 15,
+          title: "Yoshi's Crafted World",
+          releaseYear: 2019,
+          platform: "Nintendo Switch",
+          genre: "Platformer",
+        },
+        {
+          id: 16,
+          title: "Pikmin 3 Deluxe",
+          releaseYear: 2020,
+          platform: "Nintendo Switch",
+          genre: "Real-time strategy",
+        },
+        {
+          id: 17,
+          title: "Astral Chain",
+          releaseYear: 2019,
+          platform: "Nintendo Switch",
+          genre: "Action",
+        },
+        {
+          id: 18,
+          title: "Pokémon Let's Go, Pikachu!",
+          releaseYear: 2018,
+          platform: "Nintendo Switch",
+          genre: "Role-playing",
+        },
+        {
+          id: 19,
+          title: "Octopath Traveler",
+          releaseYear: 2018,
+          platform: "Nintendo Switch",
+          genre: "Role-playing",
+        },
+        {
+          id: 20,
+          title: "Hyrule Warriors: Age of Calamity",
+          releaseYear: 2020,
+          platform: "Nintendo Switch",
+          genre: "Hack and slash",
+        },
+      ];
 
-        let option2 = document.createElement("option");
-        option2.value = "2";
-        option2.innerText = "Dr.Yoshi";
-        doctorSelect.appendChild(option2);
+      let nintendoSelect = document.getElementById("nintendoSelect");
 
-        let option3 = document.createElement("option");
-        option3.value = "3";
-        option3.innerText = "Dr.Salchi-Papa";
-        doctorSelect.appendChild(option3)
+      for (const game of nintendoGames) {
+        let option1 = document.createElement("option");
+        option1.value = game.id;
+        option1.innerText = game.title;
+        nintendoSelect.appendChild(option1);
+      }
     </script>
   </body>
 </html>
