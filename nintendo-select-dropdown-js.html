@@ -8,15 +8,20 @@
   </head>
   <body>
     <main>
-      <form>
-        <label for="nintendoSelect" class="form-label">Nintendo Games</label>
-        <select class="form-select" id="nintendoSelect">
-          <option value="">Select...</option>
-          <!-- <option value="1">Paper Mario: The Thousand-Year Door</option>
+      <div>
+        <form>
+          <label for="nintendoSelect" class="form-label">Nintendo Games</label>
+          <select class="form-select" id="nintendoSelect">
+            <option value="">Select...</option>
+            <!-- <option value="1">Paper Mario: The Thousand-Year Door</option>
           <option value="2">The Legend of Zelda: Echoes of Wisdom</option>
           <option value="3">Mario Party Superstars</option> -->
-        </select>
-      </form>
+          </select>
+          <button onclick="showDetails()" type="button">Show Details</button>
+        </form>
+      </div>
+
+      <div id="detailsDiv"></div>
     </main>
 
     <script>
@@ -166,23 +171,39 @@
       ];
 
       let nintendoSelect = document.getElementById("nintendoSelect");
+      let detailsDiv = document.getElementById("detailsDiv");
 
-      function loadNintendoGamesSelect() {
-        for (const game of nintendoGames) {
-          
-          // vv one way of pulling the games into the dropdowm vv
-          // let option = document.createElement("option");
-          // option.value = game.id;
-          // option.innerText = game.title;
+      for (const game of nintendoGames) {
+        // vv one way of pulling the games into the dropdowm vv
+        // let option = document.createElement("option");
+        // option.value = game.id;
+        // option.innerText = game.title;
 
-          // vv another way of pulling the games into the dropdown vv
-          let option = new Option(game.title, game.id);
-          nintendoSelect.appendChild(option);
-        }
+        // vv another way of pulling the games into the dropdown vv
+        let option = new Option(game.title, game.id);
+        nintendoSelect.appendChild(option);
       }
 
-      loadNintendoGamesSelect();
+      function showDetails() {
+        let id = Number(nintendoSelect.value);
+        console.log(id);
 
+        let selectedGame;
+        for (const game of nintendoGames) {
+          if (game.id === id) {
+            selectedGame = game;
+            break;
+          }
+        }
+
+        console.log(selectedGame);
+
+        if (selectedGame) {
+          detailsDiv.innerText = `${selectedGame.title} (${selectedGame.releaseYear}) was selected. It is a ${selectedGame.genre} game on the ${selectedGame.platform}.`;
+        } else {
+          detailsDiv.innerText = "Please select a game.";
+        }
+      }
     </script>
   </body>
 </html>
